@@ -1,0 +1,34 @@
+    <!DOCTYPE html>
+    <html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>OnMyWay - Create Group</title>
+        <link rel="stylesheet" href="../index/index.css">
+        <script src="../privateGroups/createPrivateGroup.js" defer></script>
+    </head>
+    <body>
+        <div class="container">
+            <h2>Create a New Group</h2>
+            <div class="form-group">
+                <label for="group-name">Group Name:</label>
+                <input type="text" id="group-name" placeholder="Enter group name">
+            </div>
+            <div class="form-group">
+                <label for="group-description">Description:</label>
+                <textarea id="group-description" placeholder="Enter group description"></textarea>
+            </div>
+            <div class="form-group">
+                <label for="group-limit">User Limit:</label>
+                <input type="number" id="group-limit" placeholder="Enter user limit">
+            </div>
+            <div class="form-group">
+                <label for="group-additional-info">Additional Information:</label>
+                <textarea id="group-additional-info" placeholder="Enter any additional information (optional)"></textarea>
+            </div>
+            <button onclick="createGroup()">Create Group</button>
+            <div class="message" id="message"></div>
+        </div>
+    </body>
+    </html>
+    

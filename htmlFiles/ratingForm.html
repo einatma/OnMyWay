@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rate Your Trip</title>
+    <link rel="stylesheet" href="../ratingForm/ratingForm.css">
+    <script src="../ratingForm/ratingForm.js" defer></script>
+</head>
+<body>
+    <form id="rating-form">
+        <h1>Rate Your Trip</h1>
+        <label for="safety">Safety:</label>
+        <select id="safety" name="safety">
+            <option value="1">1 - Very Unsafe</option>
+            <option value="2">2 - Unsafe</option>
+            <option value="3">3 - Neutral</option>
+            <option value="4">4 - Safe</option>
+            <option value="5">5 - Very Safe</option>
+        </select>
+
+        <label for="cleanliness">Cleanliness:</label>
+        <select id="cleanliness" name="cleanliness">
+            <option value="1">1 - Very Dirty</option>
+            <option value="2">2 - Dirty</option>
+            <option value="3">3 - Neutral</option>
+            <option value="4">4 - Clean</option>
+            <option value="5">5 - Very Clean</option>
+        </select>
+
+        <label for="comfort">Comfort:</label>
+        <select id="comfort" name="comfort">
+            <option value="1">1 - Very Uncomfortable</option>
+            <option value="2">2 - Uncomfortable</option>
+            <option value="3">3 - Neutral</option>
+            <option value="4">4 - Comfortable</option>
+            <option value="5">5 - Very Comfortable</option>
+        </select>
+
+        <label for="atmosphere">Atmosphere:</label>
+        <select id="atmosphere" name="atmosphere">
+            <option value="1">1 - Very Unpleasant</option>
+            <option value="2">2 - Unpleasant</option>
+            <option value="3">3 - Neutral</option>
+            <option value="4">4 - Pleasant</option>
+            <option value="5">5 - Very Pleasant</option>
+        </select>
+
+        <label for="comments">Additional Comments:</label>
+        <textarea id="comments" name="comments" rows="4"></textarea>
+
+        <button type="submit">Submit Feedback</button>
+    </form>
+</body>
+</html>
