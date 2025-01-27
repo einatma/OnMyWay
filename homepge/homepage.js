@@ -11,7 +11,7 @@ if (currentUserData && currentUserData.fullname) {
 document.getElementById('new-ride-btn').addEventListener('click', function() {
     const isDriver = currentUser.isDriver;
     if (isDriver) {
-        window.location.href = 'new-ride.html'; 
+        window.location.href = 'createPrivateGroup/new-ride.html'; 
     } else {
         alert('Please complete your registration as a driver.');
         window.location.href = 'register-driver.html'; 
@@ -19,9 +19,12 @@ document.getElementById('new-ride-btn').addEventListener('click', function() {
 });
 
 document.getElementById('join-ride-btn').addEventListener('click', function() {
-    window.location.href = 'join-ride.html'; 
+    window.location.href = '../htmlFiles/joinRide.html'; 
+});
+document.getElementById('ride-history-btn').addEventListener('click', function() {
+    window.location.href = '../htmlFiles/rideHistory.html'; 
 });
 
 document.getElementById('new-group-btn').addEventListener('click', function() {
-    window.location.href = 'new-group.html'; 
+    window.location.href = '../htmlFiles/createPrivateGroup.html'; 
 });

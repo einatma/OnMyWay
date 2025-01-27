@@ -61,7 +61,7 @@ function signup() {
             localStorage.setItem(userKey, JSON.stringify(userData));
             localStorage.setItem('current', email);
             setCookie('current', email, 5);
-            window.location.href = '../homepge/homepage.html';
+            window.location.href = '../htmlFiles/homepage.html';
         }
     } else {
         displayMessage('Please fill in all required fields.', 'red');
