@@ -16,7 +16,7 @@ function login() {
         displayMessage('Please fill in all fields.', 'red');
         return;
     }
-    window.location.href = '../homepge/homepage.html';
+    window.location.href = '../htmlfiles/homepage.html';
 
 }
 
@@ -61,7 +61,7 @@ function signup() {
             localStorage.setItem(userKey, JSON.stringify(userData));
             localStorage.setItem('current', email);
             setCookie('current', email, 5);
-            window.location.href = '../htmlFiles/homepage.html';
+            window.location.href = '../htmlfiles/homepage.html';
         }
     } else {
         displayMessage('Please fill in all required fields.', 'red');

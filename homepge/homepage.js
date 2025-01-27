@@ -4,27 +4,34 @@ const currentUserData = JSON.parse(localStorage.getItem(currentUserKey));
 
 if (currentUserData && currentUserData.fullname) {
     document.getElementById("welcome-banner").innerHTML = "Welcome " + currentUserData.fullname;
-} else {
+} else if (currentUserEmail) {
     document.getElementById("welcome-banner").innerHTML = "Welcome Guest";
+} else {
+    // אם אין משתמש מחובר, מפנים לעמוד הכניסה
+    window.location.href = '../htmlfiles/login.html';
 }
 
-document.getElementById('new-ride-btn').addEventListener('click', function() {
-    const isDriver = currentUser.isDriver;
-    if (isDriver) {
-        window.location.href = 'createPrivateGroup/new-ride.html'; 
+// לחצן ליצירת נסיעה חדשה
+document.getElementById('new-ride-btn').addEventListener('click', function () {
+    if (currentUserData && currentUserData.isDriver) {
+        window.location.href = '../htmlfiles/newRideForm.html';
     } else {
         alert('Please complete your registration as a driver.');
-        window.location.href = 'register-driver.html'; 
+        window.location.href = '../htmlfiles/register-driver.html';
     }
 });
 
-document.getElementById('join-ride-btn').addEventListener('click', function() {
-    window.location.href = '../htmlFiles/joinRide.html'; 
-});
-document.getElementById('ride-history-btn').addEventListener('click', function() {
-    window.location.href = '../htmlFiles/rideHistory.html'; 
+// לחצן להצטרפות לנסיעה
+document.getElementById('join-ride-btn').addEventListener('click', function () {
+    window.location.href = '../htmlfiles/joinRide.html'; // עדכן לכתובת המתאימה
 });
 
-document.getElementById('new-group-btn').addEventListener('click', function() {
-    window.location.href = '../htmlFiles/createPrivateGroup.html'; 
+// לחצן היסטוריית נסיעות
+document.getElementById('ride-history-btn').addEventListener('click', function () {
+    window.location.href = '../htmlfiles/rideHistory.html';
+});
+
+// לחצן יצירת קבוצה פרטית
+document.getElementById('new-group-btn').addEventListener('click', function () {
+    window.location.href = '../htmlfiles/createPrivateGroup.html';
 });

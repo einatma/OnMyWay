@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rides System</title>
+    <link rel="stylesheet" href="../viewRides/viewRides.css">
+</head>
+<body>
+    <header>
+        <h1>Available Rides</h1>
+        <div class="filter-container">
+            <label for="group-id">Enter Group ID:</label>
+            <input type="text" id="group-id" placeholder="Leave empty for public rides">
+            <button id="filter-btn">Filter Rides</button>
+        </div>
+    </header>
+    <main>
+        <div id="rides-container">
+            <!-- Dynamic rides list will appear here -->
+        </div>
+    </main>
+    <script src="../viewRides/viewRides.js"></script>
+</body>
+</html>

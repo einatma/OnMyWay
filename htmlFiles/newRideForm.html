@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Create a New Trip</title>
+    <link rel="stylesheet" href="../newRideForm/newRideForm.css">
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
+</head>
+<body>
+    <div class="container">
+        <div class="map-container">
+            <div id="map"></div>
+        </div>
+        <div class="form-container">
+            <h1>Create a New Trip</h1>
+            <form id="trip-form">
+                <div class="form-group">
+                    <label for="start-point">Start Point:</label>
+                    <input type="text" id="start-point" placeholder="Click the map to select a start point" readonly>
+                </div>
+                <div class="form-group">
+                    <label for="end-point">Destination Point:</label>
+                    <input type="text" id="end-point" placeholder="Click the map to select a destination point" readonly>
+                </div>
+                <div class="form-group">
+                    <label for="deviation">Maximum Deviation (in km):</label>
+                    <input type="number" id="deviation" placeholder="Enter a number (e.g., 5)">
+                </div>
+                <div class="form-group">
+                    <label for="passengers">Number of Passengers:</label>
+                    <input type="number" id="passengers" placeholder="Enter a number (e.g., 3)">
+                </div>
+                <div class="form-group">
+                    <label for="payment">Payment Type:</label>
+                    <select id="payment">
+                        <option value="free">Free</option>
+                        <option value="global">Flat Rate (₪)</option>
+                        <option value="per_km">Per Kilometer (₪)</option>
+                    </select>
+                </div>
+                <div class="form-group" id="payment-amount-group" style="display: none;">
+                    <label for="payment-amount">Payment Amount (₪):</label>
+                    <input type="number" id="payment-amount" placeholder="Enter a number (e.g., 20)">
+                </div>
+                <div class="form-group">
+                    <label for="additional-info">Additional Information:</label>
+                    <textarea id="additional-info" rows="4" placeholder="Add any additional details about the trip"></textarea>
+                </div>
+                <button type="submit">Create Trip</button>
+            </form>
+        </div>
+    </div>
+    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+    <script src="../newRideForm/newRideForm.js"></script>
+</body>
+</html>

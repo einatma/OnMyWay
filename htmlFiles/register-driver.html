@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Complete Driver Details</title>
+  <link rel="stylesheet" href="../register-driver/register-driver.css">
+  <script src="../register-driver/register-driver.js" defer></script>
+</head>
+<body>
+  <div class="container">
+    <div id="driver-details-container">
+      <h2>You Are Not Registered as a Driver</h2>
+      <p>To complete your trip, please fill in the required details below:</p>
+      <div class="form-group">
+        <label for="car-number">Car Number:</label>
+        <input type="text" id="car-number" placeholder="Enter car number">
+      </div>
+      <div class="form-group">
+        <label for="car-type">Car Type:</label>
+        <select id="car-type">
+          <option value="private">Private</option>
+          <option value="commercial">Commercial</option>
+        </select>
+      </div>
+      <div class="form-group">
+        <label for="car-seats">Available Seats:</label>
+        <input type="number" id="car-seats" placeholder="Enter number of available seats">
+      </div>
+      <div class="form-group">
+        <label for="driver-additional-info">Additional Information:</label>
+        <textarea id="driver-additional-info" placeholder="Enter any additional driver information (optional)"></textarea>
+      </div>
+      <button onclick="submitDriverDetails()">Submit</button>
+      <div class="message" id="message"></div>
+    </div>
+  </div>
+</body>
+</html>
