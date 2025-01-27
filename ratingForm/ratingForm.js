@@ -25,5 +25,5 @@ document.getElementById('rating-form').addEventListener('submit', function (even
     localStorage.setItem(userKey, JSON.stringify(userData));
 
     alert('Thank you for your feedback!');
-    window.location.href = 'trips.html';  // Redirect back to the trip history page
+    window.location.href = '../htmlfiles/homepage.html';  // Redirect back to the trip history page
 });

@@ -36,6 +36,7 @@ header {
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
     padding: 1rem;
     text-align: left;
+    width: 90%;
 }
 
 .ride-card h3 {
@@ -60,5 +61,24 @@ header {
 }
 
 .ride-card button:hover {
-    background-color: #45a049;
+    background-color: #4585a0;
+}
+footer {
+    text-align: center;
+    margin: 2rem 0;
+}
+
+#create-ride-btn {
+    background-color: #2f4450;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    padding: 1rem 2rem;
+    font-size: 1.2rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+#create-ride-btn:hover {
+    background-color: #2a968b;
 }

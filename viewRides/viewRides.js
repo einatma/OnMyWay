@@ -146,3 +146,7 @@ document.addEventListener("DOMContentLoaded", () => {
     populateMockData(); // Ensure mock data exists in localStorage
     renderRides(); // Show public rides by default
 });
+
+document.getElementById("create-ride-btn").addEventListener("click", () => {
+    window.location.href = "../htmlfiles/newRideForm.html"; // Redirect to the new ride form
+});

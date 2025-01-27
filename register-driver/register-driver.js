@@ -9,17 +9,23 @@ function submitDriverDetails() {
         return;
     }
 
-    const driverDetails = {
-        carNumber,
-        carType,
-        carSeats,
-        driverAdditionalInfo,
-    };
+    const email = localStorage.getItem('current'); // המייל של המשתמש הנוכחי
+    const userKey = `user_${email}`;
+    let userData = JSON.parse(localStorage.getItem(userKey));
 
-    localStorage.setItem('driverDetails', JSON.stringify(driverDetails));
+    // עדכון פרטי הנהג במשתמש
+    userData.isDriver = true;
+    userData.carNumber = carNumber;
+    userData.carType = carType;
+    userData.carSeats = carSeats;
+    userData.driverAdditionalInfo = driverAdditionalInfo;
+
+    // שמירת הנתונים המעודכנים ב-localStorage
+    localStorage.setItem(userKey, JSON.stringify(userData));
+
     displayMessage('Driver details submitted successfully!', 'green');
     setTimeout(() => {
-        window.location.href = '../htmlfiles/homepage.html';
+        window.location.href = '../htmlfiles/homepage.html'; // הפניה לעמוד הבית לאחר ההשלמה
     }, 2000);
 }
 
@@ -28,3 +34,20 @@ function displayMessage(message, color) {
     messageDiv.textContent = message;
     messageDiv.style.color = color;
 }
+
+function populateDriverFields() {
+    const email = localStorage.getItem('current'); // המייל של המשתמש הנוכחי
+    const userKey = `user_${email}`;
+    const userData = JSON.parse(localStorage.getItem(userKey));
+
+    if (userData && userData.isDriver) {
+        // אם המשתמש כבר נהג, ממלאים את השדות
+        document.getElementById('car-number').value = userData.carNumber || '';
+        document.getElementById('car-type').value = userData.carType || '';
+        document.getElementById('car-seats').value = userData.carSeats || '';
+        document.getElementById('driver-additional-info').value = userData.driverAdditionalInfo || '';
+    }
+}
+
+// הפעלת הפונקציה בעת טעינת הדף
+window.onload = populateDriverFields;

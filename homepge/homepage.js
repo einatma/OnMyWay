@@ -23,7 +23,7 @@ document.getElementById('new-ride-btn').addEventListener('click', function () {
 
 // לחצן להצטרפות לנסיעה
 document.getElementById('join-ride-btn').addEventListener('click', function () {
-    window.location.href = '../htmlfiles/joinRide.html'; // עדכן לכתובת המתאימה
+    window.location.href = '../htmlfiles/viewRides.html'; // עדכן לכתובת המתאימה
 });
 
 // לחצן היסטוריית נסיעות
