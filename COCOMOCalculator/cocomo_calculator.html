@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>COCOMO Calculator</title>
+    <link rel="stylesheet" href="COCOMOCalculator.css">
+    <script src="COCOMOCalculator.js" defer></script>
+</head>
+<body>
+    <div class="container">
+        <h1>COCOMO Calculator</h1>
+        <label for="kloc">Lines of Code (KLOC):</label>
+        <input type="number" id="kloc" min="1" required>
+        
+        <label for="eaf">Effort Adjustment Factor (EAF):</label>
+        <input type="number" id="eaf" step="0.01" min="0" required>
+        
+        <label for="project-type">Project Type:</label>
+        <select id="project-type">
+            <option value="organic">Organic</option>
+            <option value="semidetached">Semidetached</option>
+            <option value="embedded">Embedded</option>
+        </select>
+        
+        <button onclick="calculateCOCOMO()">Calculate</button>
+        
+        <h2>Results</h2>
+        <p>Effort (Person-Months, MM): <span id="effort">-</span></p>
+        <p>Development Time (Months, TDEV): <span id="tdev">-</span></p>
+        <p>Team Size (TEAM): <span id="team">-</span></p>
+    </div> 
+</body>
+</html>
