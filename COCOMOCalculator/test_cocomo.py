@@ -4,7 +4,7 @@ from selenium.webdriver.common.keys import Keys
 import time
 
 
-chromedriver_path = "path/to/chromedriver" 
+chromedriver_path = ""C:\\Users\\einat\source\\repos\\OnMyWay\\OnMyWay\\COCOMOCalculator\\cocomo_calculator.html"" 
 
 
 driver = webdriver.Chrome(executable_path=chromedriver_path)
