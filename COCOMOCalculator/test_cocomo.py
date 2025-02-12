@@ -3,12 +3,12 @@ from selenium.webdriver.common.by import By
 from selenium.webdriver.common.keys import Keys
 import time
 
-# Set up the WebDriver path
-chromedriver_path = "path/to/chromedriver"  # <-- Update this path
 
-# Initialize the WebDriver
+chromedriver_path = "path/to/chromedriver" 
+
+
 driver = webdriver.Chrome(executable_path=chromedriver_path)
-driver.get("file:///path/to/your/index.html")  # <-- Update this path
+driver.get("cocomo_calculator.html")
 
 def test_organic_calculation():
     """Test calculation for an Organic project."""
